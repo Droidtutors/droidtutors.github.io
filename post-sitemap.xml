@@ -2,15 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>/</loc>
-		<lastmod>2024-08-04T05:41:29+00:00</lastmod>
+		<lastmod>2024-08-04T05:47:00+00:00</lastmod>
 	</url>
 	<url>
-		<loc>/android-studio-%e0%a6%a4%e0%a7%87-layout-%e0%a6%8f%e0%a6%b0-%e0%a6%ac%e0%a6%bf%e0%a6%ad%e0%a6%bf%e0%a6%a8%e0%a7%8d%e0%a6%a8-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%95%e0%a6%be%e0%a6%b0-types-of-layout-in/</loc>
-		<lastmod>2024-08-04T05:41:29+00:00</lastmod>
+		<loc>/types-of-layout-in/</loc>
+		<lastmod>2024-08-04T05:47:00+00:00</lastmod>
 	</url>
 	<url>
-		<loc>/android-studio-%e0%a6%a4%e0%a7%87-constraintlayout-%e0%a6%8f%e0%a6%b0-%e0%a6%aa%e0%a7%82%e0%a6%b0%e0%a7%8d%e0%a6%a3%e0%a6%be%e0%a6%99%e0%a7%8d%e0%a6%97-%e0%a6%aa%e0%a6%b0%e0%a6%bf%e0%a6%9a%e0%a6%bf/</loc>
-		<lastmod>2024-08-04T05:41:20+00:00</lastmod>
+		<loc>/android-studio-constraintlayout/</loc>
+		<lastmod>2024-08-04T05:46:31+00:00</lastmod>
 	</url>
 	<url>
 		<loc>/linearlayout-in-android-studio-a-beginners-guide-in-bangla/</loc>

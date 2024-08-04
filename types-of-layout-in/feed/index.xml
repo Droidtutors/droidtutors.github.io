@@ -7,11 +7,11 @@
 	>
 <channel>
 	<title>
-	Comments on: Android Studio-তে ConstraintLayout এর পূর্ণাঙ্গ পরিচিতি	</title>
-	<atom:link href="/android-studio-%E0%A6%A4%E0%A7%87-constraintlayout-%E0%A6%8F%E0%A6%B0-%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A3%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%97-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%9A%E0%A6%BF/feed/" rel="self" type="application/rss+xml" />
-	<link>/android-studio-%e0%a6%a4%e0%a7%87-constraintlayout-%e0%a6%8f%e0%a6%b0-%e0%a6%aa%e0%a7%82%e0%a6%b0%e0%a7%8d%e0%a6%a3%e0%a6%be%e0%a6%99%e0%a7%8d%e0%a6%97-%e0%a6%aa%e0%a6%b0%e0%a6%bf%e0%a6%9a%e0%a6%bf/</link>
+	Comments on: Android Studio-তে Layout-এর বিভিন্ন প্রকার &#124; Types Of Layout In Android Studio	</title>
+	<atom:link href="/types-of-layout-in/feed/" rel="self" type="application/rss+xml" />
+	<link>/types-of-layout-in/</link>
 	<description>DroidTutors: Your go-to platform for comprehensive Android Studio tutorials in Bangla. From layouts and buttons to TextViews and beyond, DroidTutors covers everything you need to become an expert in Android development. Perfect for Bangla-speaking learners seeking A to Z guidance on building Android apps.</description>
-	<lastBuildDate>Sun, 04 Aug 2024 05:41:20 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 04 Aug 2024 05:47:00 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
