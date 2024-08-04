@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>DroidNotes</title>
+	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
+	<link></link>
+	<description></description>
+	<lastBuildDate>Sun, 04 Aug 2024 02:19:02 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.6.1</generator>
+	<item>
+		<title>LinearLayout in Android Studio: A Beginner&#8217;s Guide in Bangla</title>
+		<link>/linearlayout-in-android-studio-a-beginners-guide-in-bangla/</link>
+					<comments>/linearlayout-in-android-studio-a-beginners-guide-in-bangla/#comments</comments>
+		
+		<dc:creator><![CDATA[AndroidTutors]]></dc:creator>
+		<pubDate>Sat, 03 Aug 2024 15:03:40 +0000</pubDate>
+				<category><![CDATA[Android Studio Layout]]></category>
+		<guid isPermaLink="false">/?p=1</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<h3 class="wp-block-heading" id="লিনিয়ার-লেআউট-কি">লিনিয়ার লেআউট কি?</h3>
+
+
+
+<p>লিনিয়ার লেআউট Android অ্যাপ্লিকেশন ডেভেলপমেন্টে একটি মৌলিক লেআউট। এটি একটি ভিউ গ্রুপ যা তার সমস্ত চাইল্ড ভিউগুলোকে একদম লিনিয়ার ভাবে, অর্থাৎ একটির পরে একটি সাজিয়ে রাখে। এটি হতে পারে হরিজন্টাল বা ভের্টিকাল।</p>
+
+
+
+<h3 class="wp-block-heading" id="লিনিয়ার-লেআউট-এর-গুরুত্বপূর্ণ-প্যারামিটার">লিনিয়ার লেআউট এর গুরুত্বপূর্ণ প্যারামিটার</h3>
+
+
+
+<p><strong>1. <code>orientation</code>:</strong><br>এই প্যারামিটারটি নির্ধারণ করে ভিউগুলো কিভাবে সাজানো হবে &#8211; উল্লম্ব (<code>vertical</code>) বা আনুভূমিক (<code>horizontal</code>)।</p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">android:orientation="vertical" &lt;!-- ভিউগুলোকে উল্লম্ব ভাবে সাজানো হবে --&gt;
+android:orientation="horizontal" &lt;!-- ভিউগুলোকে আনুভূমিক ভাবে সাজানো হবে --&gt;</code></pre>
+
+
+
+<p><strong>2. <code>layout_width</code> ও <code>layout_height</code>:</strong><br>এই প্যারামিটারগুলো ভিউয়ের প্রস্থ এবং উচ্চতা নির্ধারণ করে। এদের মান হতে পারে <code>wrap_content</code> বা <code>match_parent</code>।</p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">android:layout_width="match_parent" &lt;!-- পুরো প্যারেন্টের প্রস্থ নেবে --&gt;
+android:layout_width="wrap_content" &lt;!-- কন্টেন্ট অনুযায়ী প্রস্থ নেবে --&gt;</code></pre>
+
+
+
+<p><strong>3. <code>gravity</code>:</strong><br>এই প্যারামিটারটি ভিউয়ের মধ্যে কন্টেন্টের অবস্থান নির্ধারণ করে। উদাহরণস্বরূপ: <code>center</code>, <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code>।</p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">android:gravity="center" &lt;!-- কন্টেন্টকে মাঝখানে স্থাপন করবে --&gt;</code></pre>
+
+
+
+<p><strong>4. <code>layout_gravity</code>:</strong><br>এই প্যারামিটারটি চাইল্ড ভিউকে প্যারেন্ট ভিউয়ের মধ্যে কোথায় অবস্থান করবে তা নির্ধারণ করে।</p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">android:layout_gravity="center" &lt;!-- চাইল্ড ভিউকে প্যারেন্টের মাঝখানে স্থাপন করবে --&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="উদাহরণ-সহ-কোড">উদাহরণ সহ কোড</h3>
+
+
+
+<p>এখন আমরা একটি উদাহরণ দেখি যেখানে আমরা লিনিয়ার লেআউট ব্যবহার করছি এবং তার বিভিন্ন প্যারামিটারগুলো কিভাবে ব্যবহার করতে হয় তা বুঝবো।</p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" &lt;!-- প্যারেন্টের পুরো প্রস্থ নেবে --&gt;
+    android:layout_height="match_parent" &lt;!-- প্যারেন্টের পুরো উচ্চতা নেবে --&gt;
+    android:orientation="vertical" &lt;!-- ভিউগুলোকে উল্লম্ব ভাবে সাজাবে --&gt;
+    android:padding="16dp" &lt;!-- ভিউগুলোর চারপাশে ১৬ ডিপি প্যাডিং দেবে --&gt;
+    android:gravity="center"&gt; &lt;!-- কন্টেন্টগুলোকে মাঝখানে স্থাপন করবে --&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content" &lt;!-- কন্টেন্ট অনুযায়ী প্রস্থ নেবে --&gt;
+        android:layout_height="wrap_content" &lt;!-- কন্টেন্ট অনুযায়ী উচ্চতা নেবে --&gt;
+        android:text="Hello, LinearLayout!" &lt;!-- টেক্সট প্রদর্শন করবে --&gt;
+        android:textSize="18sp" &lt;!-- টেক্সটের আকার ১৮ এসপি হবে --&gt;
+        android:layout_gravity="center" /&gt; &lt;!-- টেক্সটকে প্যারেন্টের মাঝখানে স্থাপন করবে --&gt;
+
+    &lt;Button
+        android:layout_width="wrap_content" &lt;!-- কন্টেন্ট অনুযায়ী প্রস্থ নেবে --&gt;
+        android:layout_height="wrap_content" &lt;!-- কন্টেন্ট অনুযায়ী উচ্চতা নেবে --&gt;
+        android:text="Click Me" &lt;!-- বাটনে লেখা থাকবে "Click Me" --&gt;
+        android:layout_marginTop="20dp" /&gt; &lt;!-- বাটনের উপরে ২০ ডিপি মার্জিন থাকবে --&gt;
+
+&lt;/LinearLayout&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading" id="বিস্তারিত-ব্যাখ্যা">বিস্তারিত ব্যাখ্যা</h3>
+
+
+
+<ol class="wp-block-list">
+<li><strong>LinearLayout:</strong>
+<ul class="wp-block-list">
+<li><code>xmlns:android</code>: এই অংশটি একটি XML নেমস্পেস ঘোষণা করে।</li>
+
+
+
+<li><code>android:layout_width="match_parent"</code>: পুরো প্যারেন্ট ভিউয়ের প্রস্থ নেবে।</li>
+
+
+
+<li><code>android:layout_height="match_parent"</code>: পুরো প্যারেন্ট ভিউয়ের উচ্চতা নেবে।</li>
+
+
+
+<li><code>android:orientation="vertical"</code>: ভিউগুলোকে উল্লম্ব ভাবে সাজাবে।</li>
+
+
+
+<li><code>android:padding="16dp"</code>: ভিউগুলোর চারপাশে ১৬ ডিপি প্যাডিং দেবে।</li>
+
+
+
+<li><code>android:gravity="center"</code>: কন্টেন্টগুলোকে মাঝখানে স্থাপন করবে।</li>
+</ul>
+</li>
+
+
+
+<li><strong>TextView:</strong>
+<ul class="wp-block-list">
+<li><code>android:layout_width="wrap_content"</code>: কন্টেন্ট অনুযায়ী প্রস্থ নেবে।</li>
+
+
+
+<li><code>android:layout_height="wrap_content"</code>: কন্টেন্ট অনুযায়ী উচ্চতা নেবে।</li>
+
+
+
+<li><code>android:text="Hello, LinearLayout!"</code>: টেক্সট প্রদর্শন করবে।</li>
+
+
+
+<li><code>android:textSize="18sp"</code>: টেক্সটের আকার ১৮ এসপি হবে।</li>
+
+
+
+<li><code>android:layout_gravity="center"</code>: টেক্সটকে প্যারেন্টের মাঝখানে স্থাপন করবে।</li>
+</ul>
+</li>
+
+
+
+<li><strong>Button:</strong>
+<ul class="wp-block-list">
+<li><code>android:layout_width="wrap_content"</code>: কন্টেন্ট অনুযায়ী প্রস্থ নেবে।</li>
+
+
+
+<li><code>android:layout_height="wrap_content"</code>: কন্টেন্ট অনুযায়ী উচ্চতা নেবে।</li>
+
+
+
+<li><code>android:text="Click Me"</code>: বাটনে লেখা থাকবে &#8220;Click Me&#8221;।</li>
+
+
+
+<li><code>android:layout_marginTop="20dp"</code>: বাটনের উপরে ২০ ডিপি মার্জিন থাকবে।</li>
+</ul>
+</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="উপসংহার">উপসংহার</h3>
+
+
+
+<p>এই ছিল লিনিয়ার লেআউটের একটি মৌলিক পরিচিতি এবং উদাহরণ। আশা করি এটি আপনাকে লিনিয়ার লেআউট বুঝতে সাহায্য করবে। পরবর্তী পোস্টে আমরা আরো উন্নত টপিক নিয়ে আলোচনা করবো।</p>
+
+
+
+<p>আপনার কোনো প্রশ্ন থাকলে মন্তব্য করতে ভুলবেন না!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/linearlayout-in-android-studio-a-beginners-guide-in-bangla/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
