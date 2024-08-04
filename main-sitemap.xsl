@@ -11,10 +11,10 @@
 			<head>
 				<xsl:choose>
 					<xsl:when test="kml:kml">
-						<title>Locations Sitemap - DroidNotes</title>
+						<title>Locations Sitemap - DroidTutors</title>
 					</xsl:when>
 					<xsl:otherwise>
-						<title>XML Sitemap - DroidNotes</title>
+						<title>XML Sitemap - DroidTutors</title>
 					</xsl:otherwise>
 				</xsl:choose>
 				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

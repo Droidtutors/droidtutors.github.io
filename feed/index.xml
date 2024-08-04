@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>DroidNotes</title>
+	<title>DroidTutors</title>
 	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
 	<link></link>
-	<description></description>
-	<lastBuildDate>Sun, 04 Aug 2024 02:19:02 +0000</lastBuildDate>
+	<description>DroidTutors: Your go-to platform for comprehensive Android Studio tutorials in Bangla. From layouts and buttons to TextViews and beyond, DroidTutors covers everything you need to become an expert in Android development. Perfect for Bangla-speaking learners seeking A to Z guidance on building Android apps.</description>
+	<lastBuildDate>Sun, 04 Aug 2024 05:41:29 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,531 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.6.1</generator>
 	<item>
+		<title>Android Studio-তে Layout-এর বিভিন্ন প্রকার &#124; Types Of Layout In Android Studio</title>
+		<link>/android-studio-%e0%a6%a4%e0%a7%87-layout-%e0%a6%8f%e0%a6%b0-%e0%a6%ac%e0%a6%bf%e0%a6%ad%e0%a6%bf%e0%a6%a8%e0%a7%8d%e0%a6%a8-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%95%e0%a6%be%e0%a6%b0-types-of-layout-in/</link>
+					<comments>/android-studio-%e0%a6%a4%e0%a7%87-layout-%e0%a6%8f%e0%a6%b0-%e0%a6%ac%e0%a6%bf%e0%a6%ad%e0%a6%bf%e0%a6%a8%e0%a7%8d%e0%a6%a8-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%95%e0%a6%be%e0%a6%b0-types-of-layout-in/#respond</comments>
+		
+		<dc:creator><![CDATA[AndroidTutors]]></dc:creator>
+		<pubDate>Sun, 04 Aug 2024 05:40:10 +0000</pubDate>
+				<category><![CDATA[Android Studio Layout]]></category>
+		<guid isPermaLink="false">/?p=70</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<p>Android Studio-তে অ্যাপ ডিজাইন করার সময় বিভিন্ন ধরনের লে আউট ব্যবহৃত হয়, যা আপনার ইউজার ইন্টারফেসের বিভিন্ন উপাদানকে সঠিকভাবে প্লেস করার জন্য সহায়তা করে। এখানে আমরা Android Studio-তে প্রধান প্রধান লে আউট প্রকার এবং তাদের পারামিটারগুলো বিস্তারিতভাবে আলোচনা করব।</p>
+
+
+
+<h3 class="wp-block-heading">১. LinearLayout</h3>
+
+
+
+<p><strong>LinearLayout</strong> একটি সোজা লে আউট, যা ভিউগুলোকে একে একে (সরাসরি) বা অনুভূমিকভাবে সাজায়।</p>
+
+
+
+<p><strong>পারামিটারসমূহ:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><code>android:layout_width</code> &#8211; লে আউটের প্রস্থ নির্ধারণ করে।</li>
+
+
+
+<li><code>android:layout_height</code> &#8211; লে আউটের উচ্চতা নির্ধারণ করে।</li>
+
+
+
+<li><code>android:orientation</code> &#8211; ভিউগুলো কি অনুভূমিক (horizontal) না উল্লম্ব (vertical) হবে তা নির্ধারণ করে।</li>
+
+
+
+<li><code>android:layout_gravity</code> &#8211; ভিউকে তার প্যারেন্টের মধ্যে কিভাবে গ্রাভিটি দেওয়া হবে তা নির্ধারণ করে।</li>
+</ul>
+
+
+
+<p><strong>কোড উদাহরণ:</strong></p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">&lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"      &lt;!-- লে আউটের প্রস্থ প্যারেন্টের সাথে মিলিয়ে যাবে --&gt;
+    android:layout_height="wrap_content"     &lt;!-- লে আউটের উচ্চতা সামগ্রী অনুযায়ী পরিবর্তিত হবে --&gt;
+    android:orientation="vertical"&gt;          &lt;!-- ভিউগুলো উল্লম্বভাবে সাজানো হবে --&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_gravity="center"/&gt;  &lt;!-- টেক্সট ভিউকে কেন্দ্রে রাখতে গ্রাভিটি ব্যবহার করা হয়েছে --&gt;
+
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me"/&gt;
+
+&lt;/LinearLayout&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading">২. RelativeLayout</h3>
+
+
+
+<p><strong>RelativeLayout</strong> ভিউগুলোর সম্পর্কের ভিত্তিতে তাদের অবস্থান নির্ধারণ করে। এটি একটি ভিউকে অন্য ভিউ বা প্যারেন্টের সাপেক্ষে অবস্থান করতে সাহায্য করে।</p>
+
+
+
+<p><strong>পারামিটারসমূহ:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><code>android:layout_width</code> &#8211; লে আউটের প্রস্থ নির্ধারণ করে।</li>
+
+
+
+<li><code>android:layout_height</code> &#8211; লে আউটের উচ্চতা নির্ধারণ করে।</li>
+
+
+
+<li><code>android:layout_alignParentTop</code> &#8211; ভিউকে প্যারেন্টের উপরের অংশের সাথে সজ্জিত করে।</li>
+
+
+
+<li><code>android:layout_alignParentBottom</code> &#8211; ভিউকে প্যারেন্টের নিচের অংশের সাথে সজ্জিত করে।</li>
+
+
+
+<li><code>android:layout_centerHorizontal</code> &#8211; ভিউকে অনুভূমিকভাবে কেন্দ্র করে।</li>
+</ul>
+
+
+
+<p><strong>কোড উদাহরণ:</strong></p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">&lt;RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"&gt;
+
+    &lt;TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/&gt;  &lt;!-- টেক্সট ভিউ প্যারেন্টের উপরের অংশে এবং অনুভূমিকভাবে কেন্দ্রিত --&gt;
+
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me"
+        android:layout_below="@id/textView"/&gt;   &lt;!-- বাটনটি টেক্সট ভিউ এর নিচে থাকবে --&gt;
+
+&lt;/RelativeLayout&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading">৩. ConstraintLayout</h3>
+
+
+
+<p><strong>ConstraintLayout</strong> একটি উন্নত লে আউট যা বিভিন্ন ভিউগুলোর মধ্যে সম্পর্ক নির্ধারণ করতে ব্যবহৃত হয়। এটি উন্নত এবং নমনীয় কনস্ট্রেনস প্রদান করে যা আরো জটিল ইউজার ইন্টারফেস ডিজাইন করতে সাহায্য করে।</p>
+
+
+
+<p><strong>পারামিটারসমূহ:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><code>android:layout_width</code> &#8211; লে আউটের প্রস্থ নির্ধারণ করে।</li>
+
+
+
+<li><code>android:layout_height</code> &#8211; লে আউটের উচ্চতা নির্ধারণ করে।</li>
+
+
+
+<li><code>app:layout_constraintTop_toTopOf</code> &#8211; ভিউটির উপরের অংশ কিসের সাথে কনস্ট্রেন করা হবে।</li>
+
+
+
+<li><code>app:layout_constraintBottom_toBottomOf</code> &#8211; ভিউটির নিচের অংশ কিসের সাথে কনস্ট্রেন করা হবে।</li>
+
+
+
+<li><code>app:layout_constraintStart_toStartOf</code> &#8211; ভিউটির বাম অংশ কিসের সাথে কনস্ট্রেন করা হবে।</li>
+
+
+
+<li><code>app:layout_constraintEnd_toEndOf</code> &#8211; ভিউটির ডান অংশ কিসের সাথে কনস্ট্রেন করা হবে।</li>
+</ul>
+
+
+
+<p><strong>কোড উদাহরণ:</strong></p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">&lt;androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"&gt;
+
+    &lt;TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"/&gt;  &lt;!-- টেক্সট ভিউ কেন্দ্রের দিকে কনস্ট্রেন করা হয়েছে --&gt;
+
+&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading">৪. FrameLayout</h3>
+
+
+
+<p><strong>FrameLayout</strong> একটি সহজ লে আউট যা একটি ভিউকে অন্য ভিউর উপরে রাখতে ব্যবহৃত হয়। এটি সাধারণত একটি একক ভিউ সজ্জিত করতে ব্যবহৃত হয়।</p>
+
+
+
+<p><strong>পারামিটারসমূহ:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><code>android:layout_width</code> &#8211; লে আউটের প্রস্থ নির্ধারণ করে।</li>
+
+
+
+<li><code>android:layout_height</code> &#8211; লে আউটের উচ্চতা নির্ধারণ করে.</li>
+
+
+
+<li><code>android:layout_gravity</code> &#8211; ভিউটির পজিশন নির্ধারণ করে প্যারেন্টের মধ্যে।</li>
+</ul>
+
+
+
+<p><strong>কোড উদাহরণ:</strong></p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">&lt;FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_gravity="center"/&gt;  &lt;!-- টেক্সট ভিউ প্যারেন্টের কেন্দ্রে থাকবে --&gt;
+
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me"
+        android:layout_gravity="bottom|end"/&gt;   &lt;!-- বাটনটি প্যারেন্টের নিচে এবং ডান পাশে থাকবে --&gt;
+
+&lt;/FrameLayout&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading">৫. GridLayout</h3>
+
+
+
+<p><strong>GridLayout</strong> একটি টেবিলের মতো লে আউট যা ভিউগুলোকে একটি গ্রিড সেলসের মধ্যে সাজায়।</p>
+
+
+
+<p><strong>পারামিটারসমূহ:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><code>android:layout_width</code> &#8211; লে আউটের প্রস্থ নির্ধারণ করে।</li>
+
+
+
+<li><code>android:layout_height</code> &#8211; লে আউটের উচ্চতা নির্ধারণ করে।</li>
+
+
+
+<li><code>android:layout_row</code> &#8211; ভিউটির সারির পজিশন নির্ধারণ করে।</li>
+
+
+
+<li><code>android:layout_column</code> &#8211; ভিউটির কলামের পজিশন নির্ধারণ করে।</li>
+</ul>
+
+
+
+<p><strong>কোড উদাহরণ:</strong></p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">&lt;GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="2"&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cell 1"
+        android:layout_row="0"
+        android:layout_column="0"/&gt;
+
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cell 2"
+        android:layout_row="0"
+        android:layout_column="1"/&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cell 3"
+        android:layout_row="1"
+        android:layout_column="0"/&gt;
+
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cell 4"
+        android:layout_row="1"
+        android:layout_column="1"/&gt;
+
+&lt;/GridLayout&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading">উপসংহার</h3>
+
+
+
+<p>এই ব্লগ পোস্টে আমরা Android Studio-তে ব্যবহৃত প্রধান লে আউটগুলির পরিচিতি পেয়েছি এবং তাদের মূল পারামিটারগুলির ব্যাখ্যা করেছি। প্রত্যেক লে আউটের নিজস্ব ব্যবহার এবং সুবিধা রয়েছে যা আপনার ডিজাইনের চাহিদা অনুযায়ী নির্বাচন করা উচিত। আশা করি এই গাইডটি আপনাকে Android Studio-তে লে আউট</p>
+
+
+
+<p>ব্যবহারে সাহায্য করবে।</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/android-studio-%e0%a6%a4%e0%a7%87-layout-%e0%a6%8f%e0%a6%b0-%e0%a6%ac%e0%a6%bf%e0%a6%ad%e0%a6%bf%e0%a6%a8%e0%a7%8d%e0%a6%a8-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%95%e0%a6%be%e0%a6%b0-types-of-layout-in/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Android Studio-তে ConstraintLayout এর পূর্ণাঙ্গ পরিচিতি</title>
+		<link>/android-studio-%e0%a6%a4%e0%a7%87-constraintlayout-%e0%a6%8f%e0%a6%b0-%e0%a6%aa%e0%a7%82%e0%a6%b0%e0%a7%8d%e0%a6%a3%e0%a6%be%e0%a6%99%e0%a7%8d%e0%a6%97-%e0%a6%aa%e0%a6%b0%e0%a6%bf%e0%a6%9a%e0%a6%bf/</link>
+					<comments>/android-studio-%e0%a6%a4%e0%a7%87-constraintlayout-%e0%a6%8f%e0%a6%b0-%e0%a6%aa%e0%a7%82%e0%a6%b0%e0%a7%8d%e0%a6%a3%e0%a6%be%e0%a6%99%e0%a7%8d%e0%a6%97-%e0%a6%aa%e0%a6%b0%e0%a6%bf%e0%a6%9a%e0%a6%bf/#respond</comments>
+		
+		<dc:creator><![CDATA[AndroidTutors]]></dc:creator>
+		<pubDate>Sun, 04 Aug 2024 05:30:33 +0000</pubDate>
+				<category><![CDATA[Android Studio Layout]]></category>
+		<guid isPermaLink="false">/?p=66</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[
+<p>Android Studio-তে ConstraintLayout একটি অত্যন্ত শক্তিশালী এবং নমনীয় লে আউট ম্যানেজার যা ব্যবহারকারীর ইন্টারফেস ডিজাইনকে সহজ এবং আরও নিয়ন্ত্রিত করে তোলে। আজ আমরা ConstraintLayout এর বিভিন্ন পারামিটার এবং তাদের ব্যবহার নিয়ে বিস্তারিত আলোচনা করব।</p>
+
+
+
+<h3 class="wp-block-heading">ConstraintLayout কি?</h3>
+
+
+
+<p>ConstraintLayout হল একটি লে আউট ম্যানেজার যা আপনাকে সহজেই ভিউগুলোর মধ্যে সম্পর্ক নির্ধারণ করতে এবং একটি ফ্লেক্সিবল ইউজার ইন্টারফেস তৈরি করতে সহায়তা করে। এটি বিশেষভাবে দরকারী যখন আপনি একটি স্ক্রীনে একাধিক ভিউ বা উপাদান রাখতে চান এবং তাদের মধ্যে সঠিক অবস্থান এবং সম্পর্ক নির্ধারণ করতে চান।</p>
+
+
+
+<h3 class="wp-block-heading">ConstraintLayout এর মূল পারামিটারসমূহ</h3>
+
+
+
+<h4 class="wp-block-heading">1. <code>layout_width</code> এবং <code>layout_height</code></h4>
+
+
+
+<p>এটি ConstraintLayout-এ প্রাথমিকভাবে ভিউ-এর প্রস্থ এবং উচ্চতা নির্ধারণ করে। সাধারণত এটি <code>match_parent</code>, <code>wrap_content</code>, অথবা নির্দিষ্ট সাইজ হতে পারে।</p>
+
+
+
+<p><strong>উদাহরণ:</strong></p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">android:layout_width="0dp"      &lt;!-- প্রস্থটি কনস্ট্রেনট অনুযায়ী নির্ধারিত হবে --&gt;
+android:layout_height="wrap_content"   &lt;!-- উচ্চতা সামগ্রী অনুযায়ী পরিবর্তিত হবে --&gt;</code></pre>
+
+
+
+<h4 class="wp-block-heading">2. <code>layout_constraintTop_toTopOf</code>, <code>layout_constraintBottom_toBottomOf</code>, <code>layout_constraintStart_toStartOf</code>, <code>layout_constraintEnd_toEndOf</code></h4>
+
+
+
+<p>এই পারামিটারগুলি বিভিন্ন ভিউ-এর মধ্যে কনস্ট্রেন তৈরি করতে ব্যবহৃত হয়। এটি একটি ভিউকে অন্য একটি ভিউ-এর সীমানার সাথে সংযুক্ত করে।</p>
+
+
+
+<p><strong>উদাহরণ:</strong></p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">android:layout_constraintTop_toTopOf="@id/another_view"   &lt;!-- বর্তমান ভিউয়ের উপরের অংশ অন্য ভিউয়ের উপর অংশের সাথে সংযুক্ত --&gt;
+android:layout_constraintBottom_toBottomOf="@id/another_view" &lt;!-- বর্তমান ভিউয়ের নিচের অংশ অন্য ভিউয়ের নিচের অংশের সাথে সংযুক্ত --&gt;
+android:layout_constraintStart_toStartOf="@id/another_view" &lt;!-- বর্তমান ভিউয়ের বাম অংশ অন্য ভিউয়ের বাম অংশের সাথে সংযুক্ত --&gt;
+android:layout_constraintEnd_toEndOf="@id/another_view"     &lt;!-- বর্তমান ভিউয়ের ডান অংশ অন্য ভিউয়ের ডান অংশের সাথে সংযুক্ত --&gt;</code></pre>
+
+
+
+<h4 class="wp-block-heading">3. <code>layout_constraintHorizontal_bias</code> এবং <code>layout_constraintVertical_bias</code></h4>
+
+
+
+<p>এই পারামিটারগুলি ভিউ এর অবস্থান কনস্ট্রেন করার সময় অনুভূমিক এবং উল্লম্বভাবে কিভাবে ভিউটি কনস্ট্রেনটের মধ্যে অবস্থান করবে তা নির্ধারণ করে।</p>
+
+
+
+<p><strong>উদাহরণ:</strong></p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">android:layout_constraintHorizontal_bias="0.5"   &lt;!-- অনুভূমিকভাবে কনস্ট্রেনটের মধ্যে ৫০% অবস্থানে --&gt;
+android:layout_constraintVertical_bias="0.5"     &lt;!-- উল্লম্বভাবে কনস্ট্রেনটের মধ্যে ৫০% অবস্থানে --&gt;</code></pre>
+
+
+
+<h4 class="wp-block-heading">4. <code>layout_constraintDimensionRatio</code></h4>
+
+
+
+<p>এই পারামিটারটি একটি ভিউ-এর প্রস্থ এবং উচ্চতার অনুপাত নির্ধারণ করতে ব্যবহৃত হয়, যা ভিউ-এর আকৃতি নিয়ন্ত্রণ করে।</p>
+
+
+
+<p><strong>উদাহরণ:</strong></p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">android:layout_constraintDimensionRatio="1:1"   &lt;!-- প্রস্থ এবং উচ্চতার অনুপাত ১:১ হবে --&gt;</code></pre>
+
+
+
+<h4 class="wp-block-heading">5. <code>layout_constraintGuide_begin</code>, <code>layout_constraintGuide_end</code>, <code>layout_constraintGuide_percent</code></h4>
+
+
+
+<p>গাইডলাইন ব্যবহার করে লে আউটে ন্যাভিগেশন তৈরি করতে পারবেন। গাইডলাইনটি নির্দিষ্ট পজিশনে একটি কনস্ট্রেন তৈরি করে।</p>
+
+
+
+<p><strong>উদাহরণ:</strong></p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">android:layout_constraintGuide_begin="16dp"      &lt;!-- গাইডলাইন শুরু হবে ১৬dp পজিশনে --&gt;
+android:layout_constraintGuide_end="16dp"        &lt;!-- গাইডলাইন শেষ হবে ১৬dp পজিশনে --&gt;
+android:layout_constraintGuide_percent="0.5"     &lt;!-- গাইডলাইন পজিশন হবে প্যারেন্টের ৫০% --&gt;</code></pre>
+
+
+
+<h4 class="wp-block-heading">6. <code>layout_constraintHorizontal_chainStyle</code> এবং <code>layout_constraintVertical_chainStyle</code></h4>
+
+
+
+<p>এই পারামিটারগুলি চেইন স্টাইল কনফিগার করতে ব্যবহৃত হয়। এটি ভিউগুলির মধ্যে সম্পর্ক এবং বিতরণ নির্ধারণ করে।</p>
+
+
+
+<p><strong>উদাহরণ:</strong></p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">android:layout_constraintHorizontal_chainStyle="spread"  &lt;!-- ভিউগুলো সমানভাবে বিতরণ করা হবে --&gt;
+android:layout_constraintVertical_chainStyle="packed"    &lt;!-- ভিউগুলো একটি নির্দিষ্ট পজিশনে সমাহারিত হবে --&gt;</code></pre>
+
+
+
+<h3 class="wp-block-heading">উদাহরণ কোড</h3>
+
+
+
+<p>এখন একটি পূর্ণাঙ্গ উদাহরণ দেখি কিভাবে ConstraintLayout ব্যবহার করা হয়:</p>
+
+
+
+<pre class="wp-block-code"><code lang="xml" class="language-xml line-numbers">&lt;androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"&gt;
+
+    &lt;!-- একটি টেক্সট ভিউ যা কেন্দ্রের দিকে কনস্ট্রেন করা হয়েছে --&gt;
+    &lt;TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5" /&gt;
+
+&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</code></pre>
+
+
+
+<p><strong>ব্যাখ্যা:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>এখানে আমরা একটি <code>ConstraintLayout</code> ব্যবহার করেছি যার মধ্যে একটি <code>TextView</code> রাখা হয়েছে।</li>
+
+
+
+<li><code>TextView</code> এর <code>layout_constraintTop_toTopOf</code>, <code>layout_constraintBottom_toBottomOf</code>, <code>layout_constraintStart_toStartOf</code>, এবং <code>layout_constraintEnd_toEndOf</code> এর মাধ্যমে আমরা এটিকে প্যারেন্ট কনস্ট্রেনটের মধ্যে কেন্দ্রে রেখেছি।</li>
+
+
+
+<li><code>layout_constraintHorizontal_bias</code> এবং <code>layout_constraintVertical_bias</code> এর মাধ্যমে ভিউটি কনস্ট্রেনটের মধ্যে সঠিকভাবে কেন্দ্রীভূত হয়েছে।</li>
+</ul>
+
+
+
+<p>এভাবে, ConstraintLayout এর মাধ্যমে আপনি আপনার অ্যাপের ইউজার ইন্টারফেসকে আরও সঠিক এবং সুন্দরভাবে ডিজাইন করতে পারেন। আশা করি, এই গাইড আপনাকে ConstraintLayout ব্যবহার করার ক্ষেত্রে সাহায্য করবে।</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/android-studio-%e0%a6%a4%e0%a7%87-constraintlayout-%e0%a6%8f%e0%a6%b0-%e0%a6%aa%e0%a7%82%e0%a6%b0%e0%a7%8d%e0%a6%a3%e0%a6%be%e0%a6%99%e0%a7%8d%e0%a6%97-%e0%a6%aa%e0%a6%b0%e0%a6%bf%e0%a6%9a%e0%a6%bf/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>LinearLayout in Android Studio: A Beginner&#8217;s Guide in Bangla</title>
 		<link>/linearlayout-in-android-studio-a-beginners-guide-in-bangla/</link>
 					<comments>/linearlayout-in-android-studio-a-beginners-guide-in-bangla/#comments</comments>
